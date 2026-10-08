@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shipping, returns &amp; sizing | Kola House</title>
+  <meta name="description" content="Shipping, returns and size guide for Kola House.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+</head>
+<body data-page="shipping">
+  <div id="site-header"></div>
+
+  <main id="main" class="wrap">
+    <div class="page-hero">
+      <h1>Shipping, returns &amp; sizing</h1>
+    </div>
+    <div class="prose">
+      <h2 id="shipping">Shipping</h2>
+      <p>We ship to all 50 U.S. states. Orders are packed within [1–2] business days and arrive in about <span id="s-days"></span> business days after they ship.</p>
+      <p>Shipping is free on orders of <span id="s-free"></span> or more. Smaller orders ship for a flat <span id="s-flat"></span>. You'll get a tracking number by email as soon as your order ships.</p>
+
+      <h2 id="returns">Returns &amp; exchanges</h2>
+      <p>Clothing and shoes can be returned or exchanged within <span id="s-return"></span> days of delivery if they are unworn, unwashed and have their tags. [Say who pays return shipping.] Email <a data-store-email href="#"></a> with your order number to start a return.</p>
+      <p>For food safety, herbs can't be returned once opened. If your herbs arrive damaged, email us a photo within 7 days and we'll replace them.</p>
+
+      <h2 id="sizes">Size guide</h2>
+      <p>[Add your size chart here: bust, waist and hip measurements for each size, and shoe size conversions. Many African-made garments run differently from U.S. sizes, so a clear chart cuts down on returns.]</p>
+
+      <h2>Herbs</h2>
+      <p>Our herbs are sold as food and culinary products. These statements have not been evaluated by the Food and Drug Administration. They are not intended to diagnose, treat, cure or prevent any disease. If you are pregnant, nursing or take medication, check with your doctor before trying a new herb.</p>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="js/store-data.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var fmt = function (n) { return new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" }).format(n); };
+      document.getElementById("s-days").textContent = STORE.shippingDays;
+      document.getElementById("s-free").textContent = fmt(STORE.freeShippingOver);
+      document.getElementById("s-flat").textContent = fmt(STORE.flatShipping);
+      document.getElementById("s-return").textContent = STORE.returnDays;
+    });
+  </script>
+</body>
+</html>

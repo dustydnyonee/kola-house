@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shop | Kola House</title>
+  <meta name="description" content="Shop African clothing, shoes and West African herbs.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+</head>
+<body data-page="shop">
+  <div id="site-header"></div>
+
+  <main id="main" class="wrap">
+    <div class="page-hero">
+      <h1 id="shop-title">Shop all</h1>
+      <p class="small" id="result-count" aria-live="polite"></p>
+    </div>
+
+    <div class="filter-bar">
+      <span class="filter-label" id="cat-label">Category</span>
+      <div class="filters" id="cat-filters" role="group" aria-labelledby="cat-label"></div>
+      <div id="who-wrap" style="display:flex;flex-direction:column;gap:12px;margin-top:8px">
+        <span class="filter-label" id="who-label">For</span>
+        <div class="filters" id="who-filters" role="group" aria-labelledby="who-label"></div>
+      </div>
+    </div>
+
+    <div class="grid" id="shop-grid"></div>
+    <p class="disclaimer" id="herb-note" hidden>Herbs are sold as food and culinary products. These statements have not been evaluated by the Food and Drug Administration. Not intended to diagnose, treat, cure or prevent any disease.</p>
+    <div style="height:72px"></div>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="js/store-data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

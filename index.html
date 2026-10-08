@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kola House | African clothing, shoes and herbs</title>
+  <meta name="description" content="African clothing, shoes and traditional West African herbs for the whole family, shipped anywhere in the U.S.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+</head>
+<body data-page="home">
+  <div id="site-header"></div>
+
+  <main id="main">
+    <div class="wrap">
+      <section class="hero">
+        <div class="hero-copy">
+          <span class="badge">New season · Ankara &amp; kente</span>
+          <h1>Wear the colors of <em>home.</em></h1>
+          <p class="lead">African clothing, shoes and traditional herbs for the whole family, shipped to your door anywhere in the U.S.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="shop.html?category=clothing">Shop clothing</a>
+            <a class="btn" href="shop.html?category=herbs">Shop herbs</a>
+          </div>
+        </div>
+        <!-- Replace a pattern with a photo: style="background-image:url('images/hero-1.jpg')" and remove the pattern class -->
+        <div class="hero-art" aria-hidden="true">
+          <div class="weave"></div>
+          <div class="dots"></div>
+          <div class="leaf"></div>
+        </div>
+      </section>
+    </div>
+
+    <section class="section dark-band">
+      <div class="wrap">
+        <h2 class="section-title">Shop by category</h2>
+        <div class="tiles">
+          <a class="tile tile-clothing" href="shop.html?category=clothing">
+            <strong>Clothing</strong>
+            <span>Dresses, kaftans, dashikis and matching family sets for women, men and kids.</span>
+            <span>Shop clothing →</span>
+          </a>
+          <a class="tile tile-shoes" href="shop.html?category=shoes">
+            <strong>Shoes</strong>
+            <span>Print-lined loafers, beaded slides and kids' sandals to finish the look.</span>
+            <span>Shop shoes →</span>
+          </a>
+          <a class="tile tile-herbs" href="shop.html?category=herbs">
+            <strong>Herbs</strong>
+            <span>Bitter leaf, moringa, sorrel and alligator pepper for the kitchen and teapot.</span>
+            <span>Shop herbs →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 class="section-title">Clothing &amp; shoes</h2>
+          <a class="btn" href="shop.html">See everything</a>
+        </div>
+        <div class="grid" id="featured-grid"></div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0">
+      <div class="wrap">
+        <div class="section-head">
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <h2 class="section-title">From the herb shelf</h2>
+            <p class="lead">The flavors of West African cooking, dried and packed for soups, stews and teas.</p>
+          </div>
+          <a class="btn btn-green" href="shop.html?category=herbs">All herbs</a>
+        </div>
+        <div class="grid" id="herb-grid"></div>
+        <p class="disclaimer">These statements have not been evaluated by the Food and Drug Administration. Our herbs are sold as food and culinary products and are not intended to diagnose, treat, cure or prevent any disease.</p>
+      </div>
+    </section>
+
+    <section class="perks-band">
+      <div class="wrap perks" id="perks">
+        <div class="perk"><span data-icon="truck"></span><div><strong>Ships across the U.S.</strong>Delivered in <span id="ship-days"></span> business days</div></div>
+        <div class="perk"><span data-icon="lock"></span><div><strong>Secure checkout</strong>Cards, Apple Pay and Google Pay</div></div>
+        <div class="perk"><span data-icon="ret"></span><div><strong>Easy returns</strong>On clothing and shoes within <span id="return-days"></span> days</div></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap split">
+        <div class="split-art kente" aria-hidden="true"></div>
+        <div class="split-copy">
+          <h2 class="section-title">Our story</h2>
+          <p>[Tell customers who you are, where your clothing and herbs come from, and why you started <span data-store-name></span>. A few honest sentences work best.]</p>
+          <a class="btn btn-dark" href="about.html" style="align-self:flex-start">Read more</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="newsletter">
+      <div class="wrap">
+        <h2 class="section-title">Be first to see new prints</h2>
+        <p style="font-size:17px;margin-top:10px">New arrivals and restocks, straight to your inbox.</p>
+        <form name="newsletter" method="POST" action="/thanks.html" data-netlify="true" netlify-honeypot="company">
+          <input type="hidden" name="form-name" value="newsletter">
+          <p class="visually-hidden"><label>Leave empty <input name="company"></label></p>
+          <label for="nl-email" class="visually-hidden">Email address</label>
+          <input id="nl-email" type="email" name="email" placeholder="you@example.com" required autocomplete="email">
+          <button class="btn btn-dark" type="submit">Sign up</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="js/store-data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

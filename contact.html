@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact us | Kola House</title>
+  <meta name="description" content="Questions about an order, sizing or our herbs? Contact Kola House.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+</head>
+<body data-page="contact">
+  <div id="site-header"></div>
+
+  <main id="main" class="wrap">
+    <div class="page-hero">
+      <h1>Contact us</h1>
+      <p class="lead">Questions about an order, sizing or our herbs? Send a message and we'll reply within one business day. You can also email <a data-store-email href="#"></a>.</p>
+    </div>
+
+    <!-- Netlify collects these messages automatically and emails them to you (see README). -->
+    <form class="form" name="contact" method="POST" action="/thanks.html" data-netlify="true" netlify-honeypot="company">
+      <input type="hidden" name="form-name" value="contact">
+      <p class="visually-hidden"><label>Leave empty <input name="company"></label></p>
+      <div class="field">
+        <label for="c-name">Name</label>
+        <input id="c-name" name="name" required autocomplete="name">
+      </div>
+      <div class="field">
+        <label for="c-email">Email</label>
+        <input id="c-email" name="email" type="email" required autocomplete="email">
+      </div>
+      <div class="field">
+        <label for="c-order">Order number (optional)</label>
+        <input id="c-order" name="order">
+      </div>
+      <div class="field">
+        <label for="c-topic">Topic</label>
+        <select id="c-topic" name="topic">
+          <option>Question about an order</option>
+          <option>Sizing help</option>
+          <option>Returns or exchanges</option>
+          <option>Herbs</option>
+          <option>Wholesale or custom orders</option>
+          <option>Something else</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="c-msg">Message</label>
+        <textarea id="c-msg" name="message" required></textarea>
+      </div>
+      <button class="btn btn-primary" type="submit" style="align-self:flex-start">Send message</button>
+    </form>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="js/store-data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

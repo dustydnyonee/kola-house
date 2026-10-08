@@ -1,0 +1,12 @@
+{
+  "name": "kola-house",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Online store for African clothing, shoes and herbs",
+  "scripts": {
+    "dev": "netlify dev"
+  },
+  "dependencies": {
+    "stripe": "^16.0.0"
+  }
+}
